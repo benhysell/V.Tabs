@@ -18,10 +18,6 @@ namespace V.Tabs.Core.ViewModels
         /// </summary>
         private string myProperty = "Tab Three";
 
-        /// <summary>
-        ///  Backing field for my command.
-        /// </summary>
-        private MvxCommand myCommand;
 
         /// <summary>
         /// Gets or sets my property.
