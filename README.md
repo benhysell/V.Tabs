@@ -5,7 +5,7 @@ Sample MvvmCross WPF application with a tabs presenter. A tab bar is defined in 
 
 ## Usage
 
-Applicaiton is made up of four `Views`:
+Application is made up of four `Views`:
 * Home - Main screen that holds the tab bar and where tabs are shown
 * TabOne - Sample tab that also includes a button to show a full screen view
 * TabTwo and TabThree - Extra tabs to fill out the application
@@ -22,7 +22,7 @@ public partial class TabOneView
 ```
 Tells the `TabPresenter` this region is a tab and to replace the currently shown tab in the `HomeView`.
 
-Contrastly, `DetailFullScreenView.xaml.cs` is decorated with 
+For a full screen `View` `DetailFullScreenView.xaml.cs` is decorated with 
 ```
 [Region(Region.FullScreen)]
 public partial class DetailFullScreenView
