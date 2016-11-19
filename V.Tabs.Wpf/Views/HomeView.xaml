@@ -1,0 +1,62 @@
+<views:BaseView x:Class="V.Tabs.Wpf.Views.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"             
+             xmlns:mvx="clr-namespace:MvvmCross.BindingEx.Wpf;assembly=MvvmCross.BindingEx.Wpf"
+             xmlns:views="clr-namespace:V.Tabs.Wpf.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="320" d:DesignWidth="1188">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition />
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="Blue">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*"></RowDefinition>
+                    <RowDefinition Height="5*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid Column="0" Row="0" RowSpan="2">
+                    <Label Name="TitleLabel">Tabs Example</Label>
+                </Grid>
+                <Grid Column="2" Row="1" Margin="5,0,5,5">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".1*"></ColumnDefinition>
+                            <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                            <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                            <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="1" Margin="0,0,5,0">
+                            <Button Content="Tab One" mvx:Bi.nd="Command ShowTabOneCommand"></Button>
+                        </Grid>
+                        <Grid Grid.Column="2" Margin="0,0,5,0">
+                            <Button Content="Tab Two" mvx:Bi.nd="Command ShowTabTwoCommand"></Button>
+                        </Grid>
+                        <Grid Grid.Column="3" Margin="0,0,5,0">
+                            <Button Content="Tab Three" mvx:Bi.nd="Command ShowTabThreeCommand"></Button>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Name="ContentGrid" Grid.Row="1">
+            <Label>Content</Label>
+        </Grid>
+        <Grid Grid.Row="3" >
+            <StackPanel FlowDirection="RightToLeft" Orientation="Horizontal">
+                
+            </StackPanel>
+        </Grid>
+    </Grid>
+
+</views:BaseView>
